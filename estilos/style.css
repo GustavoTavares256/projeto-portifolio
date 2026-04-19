@@ -15,12 +15,41 @@
   --fundo-card:#ffffff;
 }
 
+body.escuro {
+  --fundo-principal: #0b0f19;     /* fundo geral (quase preto azulado) */
+  --fundo-card: #111827;          /* cards */
+  --texto: #e5e7eb;               /* texto principal */
+  --texto-secundario: #9ca3af;    /* texto mais suave */
+  --borda: #1f2937;               /* bordas suaves */
+  --destaque: #3b82f6;            /* azul moderno */
+  --destaque-hover: #2563eb;
+  --glow: rgba(59, 130, 246, 0.25);
+}
+
+body.dark::before {
+  /* FUNDOS */
+  --bg-main: #020617;
+  --bg-gradient: radial-gradient(circle at top, #0f172a, #020617);
+  --bg-card: rgba(15, 23, 42, 0.6);
+  /* TEXTO */
+  --text-main: #e5e7eb;
+  --text-soft: #9ca3af;
+  /* BORDAS */
+  --border: rgba(255, 255, 255, 0.08);
+  /* DESTAQUE */
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  /* GLOW */
+  --glow: rgba(59, 130, 246, 0.25);
+  }
+
 /* Base */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s, color 0.5;
 }
 
 /* Header */
@@ -230,6 +259,22 @@ footer a:hover{
 
 /* RESPONSIVO */
 @media screen and (min-width: 768px) {
+
+ main {
+  grid-template-columns: auto 300px 1fr auto;
+  
+}
+
+section#ficha {
+  grid-column: 2 / 3;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+section#detalhes {
+  grid-column: 3 / 4;
+}
 
   #skill-container {
     grid-template-columns: 1fr 1fr;
