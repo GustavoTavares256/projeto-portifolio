@@ -29,6 +29,9 @@ header {
   padding: 10px;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
+ 
 }
 
 nav#menu ul {
@@ -206,6 +209,23 @@ article h2 {
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover{
+  color: var(--destaque-inverso);
 }
 
 /* RESPONSIVO */
